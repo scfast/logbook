@@ -33,4 +33,4 @@ Error installing jekyll:
 
 - using the VSCode terminal and remebering the hot keys **^`**, I wonder if there is a way to have VSCode always open with the terminal
 
-## [Back to home](README.md)
+
