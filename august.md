@@ -29,7 +29,7 @@ Error installing jekyll:
 - same error, but with `gem install google-protobuf -v 3.23.4` instead, hopefully not going to require a bunch of these...
 - going to install their suggested version of ruby `ruby-install ruby 3.1.3` and retry by sticking with their`` documentation religiously.
 - it also helps to remeber to restart the terminal when making changes to the shell profile. Forgot that step. now the correct version is appear when running the `ruby -v` command
-- started a new jekyll project `jekyll new logbook` and hoisted the created files to the project root
+- started a new jekyll project `jekyll new logbook` and hoisted the created files to the project root. Deploy successful!
 
 - using the VSCode terminal and remebering the hot keys **^`**, I wonder if there is a way to have VSCode always open with the terminal
 
