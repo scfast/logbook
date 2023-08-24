@@ -38,3 +38,7 @@ Error installing jekyll:
 - Unlearning bashisms today. Appreciating that the shebang `#!/bin/sh` just means use the default shell, which can mean use bash, dash, or zsh. So when a shell script gets used in different environments certain bashisms can really mess you up.
 - one particular case is with bash array, which are not supported in dash. So a line like `ARRAY_VARS=('thing 1' 'thing 2' ...)` gives the syntax error `syntax error: unexpected "("`
 - This also lead into using arrays into loops such as `for array_vars in ${ARRAY_VARS[@]}; do...`, the easiest solution is to set the array indirectly as arguments to the script (assuming the elements of the array are predefined) `./my-script.sh 'thing 1' 'thing 2' ...` and then convert the for loop into `for array_vars in $@; do...` which will loop through the variables as argument ($1, $2, ...) which is kind of hacky, but seems to work.
+
+
+## August 23, 2023
+- using `export` in shell scripts for portability, using direct assignments like `var1="foo"` is a bashism, or is at least not portable to all shells. Writing `export var1="foo"` is preferable, especially if the shebang is shell agnostic `#!/bin/sh`
