@@ -42,3 +42,11 @@ Error installing jekyll:
 
 ## August 23, 2023
 - using `export` in shell scripts for portability, using direct assignments like `var1="foo"` is a bashism, or is at least not portable to all shells. Writing `export var1="foo"` is preferable, especially if the shebang is shell agnostic `#!/bin/sh`
+
+
+## August 27, 2023
+- learned something interesting about EC2 instances, the user data can be changed and retested without terminating and creating a new launch instance. Instead the instance can be stopped, and then the user data can be update. the instance can be started up again to test the new user data script updates. This is a good time saving/complexity reducing technique.
+
+
+## August 28, 2023
+- `echo "new_password" | sudo passwd --stdin nameofuser` can change the password of a user in linux programatically, a bit of a naughty was to do this, but it works and is handy in certain situations, like when the AMI you just created refuses to reflect the user credentials you set for it...
