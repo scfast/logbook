@@ -1,0 +1,6 @@
+# September 2023
+## Sept 26, 2023
+- Discovered that shebangs can be overridden by adding the interpreter as an argument to the command line. was searching for an issue around [Why does Docker say it can't execute 'bash"?](https://stackoverflow.com/questions/27959011/why-does-docker-say-it-cant-execute-bash) where I was getting the error `env: can't execute 'bash': No such file or directory`
+- by simply adding a `/bin/sh` allowed me to override the shebang which is a handy tool for future issues like this. Especially handy for when running similar scripts in different Linux flavours.
+- Another source that summarized it pretty well: [Overriding the Shebang Directive](https://www.linode.com/docs/guides/how-to-use-shebang-bash-python/)
+- got curious about the origin of the word Shebang. There is no clear and satisfactory explaniation, other to say it appears to be slag from an era before computers perhaps mixed with a contraction of the words for # (Hash or Sharp) and ! (Bang). The only other interesting source easily found is on the [etymology of the word](https://www.etymonline.com/word/shebang)
