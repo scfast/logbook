@@ -4,3 +4,5 @@
 - by simply adding a `/bin/sh` allowed me to override the shebang which is a handy tool for future issues like this. Especially handy for when running similar scripts in different Linux flavours.
 - Another source that summarized it pretty well: [Overriding the Shebang Directive](https://www.linode.com/docs/guides/how-to-use-shebang-bash-python/)
 - got curious about the origin of the word Shebang. There is no clear and satisfactory explaniation, other to say it appears to be slag from an era before computers perhaps mixed with a contraction of the words for # (Hash or Sharp) and ! (Bang). The only other interesting source easily found is on the [etymology of the word](https://www.etymonline.com/word/shebang)
+- Also learned about the shell `${parameter:=word}` syntax. it's like a javascript ternary where if the parameter exists it will evaluate to what ever the parameter is, otherwise it will evaluate to what the word is
+- for example: `FOO="BAR"; RIZZ=${$FOO:="JAZZ"}` RIZZ will evaluate to "BAR". however: `FOO="BAR"; RIZZ=${$BANG:="JAZZ}` RIZZ will evaluate to "JAZZ" since BANG is undefined. very handy!
